@@ -1,33 +1,33 @@
 ﻿using System.Reflection;
 using HarmonyLib;
-using ModTemplate.MainPatch;
+using FixQuit.MainPatch;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityModManagerNet;
 
-namespace ModTemplate {
+namespace FixQuit {
     internal static class Main {
         // public static Text text;
         internal static UnityModManager.ModEntry Mod;
         private static Harmony _harmony;
         internal static bool IsEnabled { get; private set; }
-        internal static MainSettings Settings { get; private set; }
+        // internal static MainSettings Settings { get; private set; }
 
         private static void Load(UnityModManager.ModEntry modEntry) {
             Mod = modEntry;
             Mod.OnToggle = OnToggle;
-            Settings = UnityModManager.ModSettings.Load<MainSettings>(modEntry);
-            Mod.OnGUI = OnGUI;
-            Mod.OnSaveGUI = OnSaveGUI;
+            // Settings = UnityModManager.ModSettings.Load<MainSettings>(modEntry);
+            // Mod.OnGUI = OnGUI;
+            // Mod.OnSaveGUI = OnSaveGUI;
         }
         
-        private static void OnGUI(UnityModManager.ModEntry modEntry) {
-            Settings.Draw(modEntry);
-        }
-
-        private static void OnSaveGUI(UnityModManager.ModEntry modEntry) {
-            Settings.Save(modEntry);
-        }
+        // private static void OnGUI(UnityModManager.ModEntry modEntry) {
+        //     Settings.Draw(modEntry);
+        // }
+        //
+        // private static void OnSaveGUI(UnityModManager.ModEntry modEntry) {
+        //     Settings.Save(modEntry);
+        // }
 
         private static bool OnToggle(UnityModManager.ModEntry modEntry, bool value) {
             IsEnabled = value;

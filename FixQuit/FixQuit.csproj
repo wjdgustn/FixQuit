@@ -7,8 +7,8 @@
     <ProjectGuid>{E9351314-818F-4A65-870E-0CADE3A45CBF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ModTemplate</RootNamespace>
-    <AssemblyName>ModTemplate</AssemblyName>
+    <RootNamespace>FixQuit</RootNamespace>
+    <AssemblyName>FixQuit</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

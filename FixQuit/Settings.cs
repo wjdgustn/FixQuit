@@ -1,6 +1,6 @@
 using UnityModManagerNet;
 
-namespace ModTemplate {
+namespace FixQuit {
     public class MainSettings : UnityModManager.ModSettings, IDrawable {
         // [Draw("A")] public int A = 0;
 

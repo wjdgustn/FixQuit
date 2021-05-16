@@ -1,0 +1,9 @@
+{
+  "Id": "FixQuit",
+  "DisplayName": "FixQuit",
+  "Author": "HYONSU",
+  "Version": "0.0.1",
+  "AssemblyName": "FixQuit.dll",
+  "EntryMethod": "FixQuit.Main.Load",
+  "Repository": ""
+}

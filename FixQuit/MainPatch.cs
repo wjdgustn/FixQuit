@@ -5,17 +5,17 @@ using HarmonyLib;
 using UnityEngine;
 using UnityModManagerNet;
 
-namespace ModTemplate.MainPatch {
+namespace FixQuit.MainPatch {
     // public class Text : MonoBehaviour {
     //     public static string Content = "Wa sans!";
     //     
     //     void OnGUI() {
-    //         GUIStyle style = GUI.skin.GetStyle("ModTemplate_text");
+    //         GUIStyle style = GUI.skin.GetStyle("FixQuit_text");
     //         style.fontSize = (int) 50.0f;
     //         style.font = RDString.GetFontDataForLanguage(RDString.language).font;
     //         style.normal.textColor = Color.white;
     //
-    //         GUI.Label(new Rect(10, -10, Screen.width, Screen.height), Content, "ModTemplate_text");
+    //         GUI.Label(new Rect(10, -10, Screen.width, Screen.height), Content, "FixQuit_text");
     //     }
     // }
 

@@ -10,7 +10,7 @@ const { findSteamAppById } = require('find-steam-app')
 setImmediate(async () => {
     rimraf.sync('Release')
 
-    cp.execSync('dotnet "C:\\Program Files\\dotnet\\sdk\\5.0.202\\MSBuild.dll" /p:Configuration=Release')
+    cp.execSync('dotnet "C:\\Program Files\\dotnet\\sdk\\5.0.203\\MSBuild.dll" /p:Configuration=Release')
 
     fs.mkdirSync('Release')
 
