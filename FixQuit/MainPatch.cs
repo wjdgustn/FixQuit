@@ -1,13 +1,15 @@
 using System;
 using System.CodeDom;
 using System.Configuration;
+using System.Net.NetworkInformation;
 using HarmonyLib;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityModManagerNet;
 
 namespace FixQuit.MainPatch {
     // public class Text : MonoBehaviour {
-    //     public static string Content = "Wa sans!";
+    //     public static string Content = "";
     //     
     //     void OnGUI() {
     //         GUIStyle style = GUI.skin.GetStyle("FixQuit_text");
@@ -16,6 +18,8 @@ namespace FixQuit.MainPatch {
     //         style.normal.textColor = Color.white;
     //
     //         GUI.Label(new Rect(10, -10, Screen.width, Screen.height), Content, "FixQuit_text");
+    //
+    //         Text.Content = SceneManager.GetActiveScene().name;
     //     }
     // }
 
@@ -81,4 +85,17 @@ namespace FixQuit.MainPatch {
     //         __instance.subtitle.text = str1;
     //     }
     // }
+
+    [HarmonyPatch(typeof(scnEditor), "TryApplicationQuit")]
+    
+    internal static class FixQuit {
+        private static bool Prefix(ref bool __result, scnEditor __instance) {
+            if (SceneManager.GetActiveScene().name != "scnEditor") {
+                __result = true;
+                return false;
+            }
+
+            return true;
+        }
+    }
 }
